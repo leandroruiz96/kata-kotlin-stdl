@@ -1,6 +1,8 @@
 package com.kstdl.scoped
 
+import java.nio.charset.Charset
 import java.security.MessageDigest
+import javax.xml.bind.DatatypeConverter
 
 data class Message(
     val destination: Destination,
@@ -47,7 +49,9 @@ data class Message(
                 .append('\"')
         }
 
-        builder.append("hash -> ")
+        builder
+            .append('\n')
+            .append("hash -> ")
             .append(hash)
 
         return builder.toString()
@@ -58,9 +62,16 @@ data class Message(
     }
 
     private fun buildHash() : String {
-        val bytes = this.toString().toByteArray()
+        var toHash = ""
+        if (message!=null) {
+            toHash += message
+        }
+        if (payload!=null) {
+            toHash += payload
+        }
+        val bytes = toHash.toByteArray()
         val hash = algorithm.digest(bytes)
-        return hash.toString()
+        return DatatypeConverter.printHexBinary(hash)
     }
 
 }
