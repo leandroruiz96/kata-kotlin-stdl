@@ -1,10 +1,12 @@
-package com.kstdl.scoped
+package com.kstdl.proposed.scoped
 
+import com.kstdl.scoped.Destination
+import com.kstdl.scoped.Message
+import com.kstdl.scoped.Method
+import com.kstdl.scoped.SSNumber
 import org.junit.Assert.*
 import org.junit.Test
-import java.nio.charset.Charset
 import java.security.MessageDigest
-import javax.xml.bind.DatatypeConverter
 
 class MessageTest {
 
