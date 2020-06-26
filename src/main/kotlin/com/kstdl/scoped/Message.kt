@@ -1,6 +1,5 @@
 package com.kstdl.scoped
 
-import java.nio.charset.Charset
 import java.security.MessageDigest
 import javax.xml.bind.DatatypeConverter
 
@@ -11,7 +10,7 @@ data class Message(
 ) {
 
     private var message: String? = null
-    private var ssNumber: SSNumber? = null
+    private var oneTimePad: OneTimePad? = null
     private var payload: Any? = null
     private var hash: String = buildHash()
 
@@ -20,8 +19,8 @@ data class Message(
         updateHash()
     }
 
-    fun updateSSNumber(ssn: SSNumber) {
-        this.ssNumber = ssn
+    fun updateOTP(otp: OneTimePad) {
+        this.oneTimePad = otp
         updateHash()
     }
 
@@ -36,10 +35,10 @@ data class Message(
                 .append(message)
         }
 
-        if (ssNumber!=null) {
+        if (oneTimePad!=null) {
             builder.append('\n')
-                .append("ssn -> ")
-                .append(ssNumber.toString())
+                .append("otp -> ")
+                .append(oneTimePad.toString())
         }
 
         if (payload!=null) {

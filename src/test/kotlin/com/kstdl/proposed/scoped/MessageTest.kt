@@ -1,9 +1,5 @@
 package com.kstdl.proposed.scoped
 
-import com.kstdl.scoped.Destination
-import com.kstdl.scoped.Message
-import com.kstdl.scoped.Method
-import com.kstdl.scoped.SSNumber
 import org.junit.Assert.*
 import org.junit.Test
 import java.security.MessageDigest
@@ -39,13 +35,14 @@ class MessageTest {
     @Test
     fun `updating ssn`() {
         givenDefaultMessage()
-        val ssn = SSNumber(1234)
+        val rngProvider = KotlinRandomProvider(1)
+        val otp = OneTimePad(rngProvider)
 
-        message.updateSSNumber(ssn)
+        message.updateOTP(OneTimePad(KotlinRandomProvider(1)))
 
         assertEquals(
             "d -> { a -> address <> vh -> sserdda }\n" +
-                    "ssn -> $ssn\n" +
+                    "otp -> $otp\n" +
                     "hash -> DA39A3EE5E6B4B0D3255BFEF95601890AFD80709",
             message.buildMessage()
         )
