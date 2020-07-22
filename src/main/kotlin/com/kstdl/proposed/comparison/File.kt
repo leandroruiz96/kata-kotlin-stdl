@@ -1,7 +1,5 @@
 package com.kstdl.proposed.comparison
 
-import com.kstdl.comparison.File
-import com.kstdl.comparison.Worker
 
 data class File(
     val id: String,

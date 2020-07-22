@@ -1,6 +1,5 @@
 package com.kstdl.proposed.comparison
 
-import com.kstdl.comparison.File
 
 class FileRepository(private val files: Collection<File>) {
 

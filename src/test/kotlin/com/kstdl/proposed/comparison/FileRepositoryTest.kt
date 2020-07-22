@@ -1,8 +1,5 @@
 package com.kstdl.proposed.comparison
 
-import com.kstdl.comparison.File
-import com.kstdl.comparison.FileRepository
-import com.kstdl.comparison.Worker
 import org.junit.Assert.*
 import org.junit.Test
 
