@@ -8,7 +8,7 @@ Notar que ninguno de los ejercicios está pensado para que analicen absolutament
 
 ## Scoped
 
-La idea de este ejercicio es identificar cuándo usar `let`, `run`, `apply` y `with`. Miren el código de `Message.kt` y de `OneTimePad.kt`. Analicen si es aplicable, en dónde y si es mejor aplicarlo o no.
+La idea de este ejercicio es identificar cuándo usar `let`, `run`, `apply` y `with`. Miren el código de `Message.kt` y de `OneTimePad.kt`. Analicen si es aplicable, en dónde y si es mejor usarlo o no.
 
 Pueden usar de referencia [la documentación de kotlin](https://kotlinlang.org/docs/reference/scope-functions.html) sobre scoped functions o como extra este [post en Medium](https://medium.com/mobile-app-development-publication/mastering-kotlin-standard-functions-run-with-let-also-and-apply-9cd334b0ef84).
 
@@ -20,7 +20,7 @@ Cosas a considerar:
 
 ## Collections
 
-En este ejercicio lo importante son las funciones sobre collections que ofrece Kotlin. Pueden la [documentacion sobre Collections](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/) para ver cuáles son. De ser necesario, reemplacen lo que les parezca mejor.
+En este ejercicio lo importante son las funciones sobre collections que ofrece Kotlin. Pueden revisar la [documentacion sobre Collections](https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/) para ver cuáles son. De ser necesario, reemplacen lo que les parezca mejor.
 
 Para reflexionar:
 - Todas las soluciones fueron mejores? Aplican siempre?
